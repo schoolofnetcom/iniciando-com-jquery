@@ -1,0 +1,41 @@
+/* _button.scss */
+
+$btn_color_default: #fff;
+$btn_color_blue: #2681ba;
+$btn_color_red: #ff3e2d;
+$btn_color_orange: #e9c83f;
+$btn_color_green: #4ab727;
+
+@function btnColor($color){
+  @return darken($color,5%);
+}
+
+@mixin NewButton($color,$colorText,$colorBorder){
+  padding:10px 16px;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid $colorBorder;
+  border-radius: percentage(5/100);
+  color: $colorText;
+  background-color: $color;
+  &:hover{
+    background-color: btnColor($color);
+  }
+}
+
+.btn-default{
+  @include NewButton($btn_color_default, #676767,#ccc);
+}
+.btn-blue{
+  @include NewButton($btn_color_blue,#fff,$btn_color_blue);
+}
+.btn-red{
+  @include NewButton($btn_color_red,#fff,$btn_color_red);
+}
+.btn-orange{
+  @include NewButton($btn_color_orange,#fff,$btn_color_orange);
+}
+.btn-green{
+  @include NewButton($btn_color_green,#fff,$btn_color_green);
+}

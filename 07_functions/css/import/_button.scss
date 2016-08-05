@@ -1,0 +1,58 @@
+/* _button.scss */
+
+$btn_color_default: #fff;
+$btn_color_blue: #2681ba;
+$btn_color_red: #ff3e2d;
+$btn_color_orange: #e9c83f;
+$btn_color_green: #4ab727;
+
+/*http://sass-lang.com/documentation/Sass/Script/Functions.html*/
+
+.btn-default{
+  padding:10px 16px;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-radius: percentage(5/100);
+  color: #535353;
+  background-color: $btn_color_default;
+  &:hover{
+    background-color: darken($btn_color_default,30%);
+  }
+}
+
+.btn-blue{
+  @extend .btn-default;
+  $btn_color_blue: blue !default;
+  border: 1px solid $btn_color_blue;
+  color: #fff;
+  background-color: $btn_color_blue;
+  &:hover{
+    background-color: darken($btn_color_blue,30%);
+  }
+}
+.btn-red{
+  @extend .btn-default;
+  border: 1px solid $btn_color_red;
+  color: #fff;
+  background-color: $btn_color_red;
+  &:hover{
+    background-color: darken($btn_color_red,30%);
+  }
+}
+.btn-orange{
+  @extend .btn-default;
+  border: 1px solid $btn_color_orange;
+  color: #fff;
+  background-color: $btn_color_orange;
+  &:hover{
+    background-color: saturate($btn_color_orange,90%);
+  }
+}
+.btn-green{
+  @extend .btn-default;
+  border: 1px solid $btn_color_green;
+  color: #fff;
+  background-color: $btn_color_green;
+}

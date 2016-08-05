@@ -1,0 +1,19 @@
+header {
+  padding: 20px; }
+  header h1 {
+    color: #2c5cff; }
+  header p {
+    font-size: 18px;
+    color: #c4c2c6; }
+  header ul {
+    display: block;
+    line-height: 1.4; }
+    header ul li {
+      margin: 5px;
+      display: inline; }
+      header ul li a {
+        text-decoration: none; }
+        header ul li a:hover {
+          color: red; }
+
+/*# sourceMappingURL=style.css.map */
